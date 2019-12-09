@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/Genesys/platform-client-sdk-php.git"
+      "url": "https://github.com/nmusco/platform-client-sdk-php.git"
     }
   ],
   "require": {
-    "Genesys/platform-client-sdk-php": "*@dev"
+    "nmusco/platform-client-sdk-php": "*@dev"
   }
 }
 ```
