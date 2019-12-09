@@ -2,12 +2,13 @@
     "name": "nmusco/platform-client-sdk-php",
     "description": "",
     "keywords": [
-        "swagger",
         "php",
         "sdk",
-        "api"
+        "api",
+        "purecloud",
+        "genesys"        
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://github.com/nmusco/platform-client-sdk-php",
     "license": "proprietary",
     "authors": [
         {
