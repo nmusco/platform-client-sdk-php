@@ -1,0 +1,56 @@
+# UserMe
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **string** | The globally unique identifier for the object. | [optional] 
+**name** | **string** |  | [optional] 
+**division** | [**\PureCloudPlatform\Client\V2\Model\Division**](Division.md) | The division to which this entity belongs. | [optional] 
+**chat** | [**\PureCloudPlatform\Client\V2\Model\Chat**](Chat.md) |  | [optional] 
+**department** | **string** |  | [optional] 
+**email** | **string** |  | [optional] 
+**primaryContactInfo** | [**\PureCloudPlatform\Client\V2\Model\Contact[]**](Contact.md) | Auto populated from addresses. | [optional] 
+**addresses** | [**\PureCloudPlatform\Client\V2\Model\Contact[]**](Contact.md) | Email addresses and phone numbers for this user | [optional] 
+**state** | **string** | The current state for this user. | [optional] 
+**title** | **string** |  | [optional] 
+**username** | **string** |  | [optional] 
+**manager** | [**\PureCloudPlatform\Client\V2\Model\User**](User.md) |  | [optional] 
+**images** | [**\PureCloudPlatform\Client\V2\Model\UserImage[]**](UserImage.md) |  | [optional] 
+**version** | **int** | Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH. | 
+**certifications** | **string[]** |  | [optional] 
+**biography** | [**\PureCloudPlatform\Client\V2\Model\Biography**](Biography.md) |  | [optional] 
+**employerInfo** | [**\PureCloudPlatform\Client\V2\Model\EmployerInfo**](EmployerInfo.md) |  | [optional] 
+**routingStatus** | [**\PureCloudPlatform\Client\V2\Model\RoutingStatus**](RoutingStatus.md) | ACD routing status | [optional] 
+**presence** | [**\PureCloudPlatform\Client\V2\Model\UserPresence**](UserPresence.md) | Active presence | [optional] 
+**conversationSummary** | [**\PureCloudPlatform\Client\V2\Model\UserConversationSummary**](UserConversationSummary.md) | Summary of conversion statistics for conversation types. | [optional] 
+**outOfOffice** | [**\PureCloudPlatform\Client\V2\Model\OutOfOffice**](OutOfOffice.md) | Determine if out of office is enabled | [optional] 
+**geolocation** | [**\PureCloudPlatform\Client\V2\Model\Geolocation**](Geolocation.md) | Current geolocation position | [optional] 
+**station** | [**\PureCloudPlatform\Client\V2\Model\UserStations**](UserStations.md) | Effective, default, and last station information | [optional] 
+**authorization** | [**\PureCloudPlatform\Client\V2\Model\UserAuthorization**](UserAuthorization.md) | Roles and permissions assigned to the user | [optional] 
+**profileSkills** | **string[]** | Profile skills possessed by the user | [optional] 
+**locations** | [**\PureCloudPlatform\Client\V2\Model\Location[]**](Location.md) | The user placement at each site location. | [optional] 
+**groups** | [**\PureCloudPlatform\Client\V2\Model\Group[]**](Group.md) | The groups the user is a member of | [optional] 
+**skills** | [**\PureCloudPlatform\Client\V2\Model\UserRoutingSkill[]**](UserRoutingSkill.md) | Routing (ACD) skills possessed by the user | [optional] 
+**languages** | [**\PureCloudPlatform\Client\V2\Model\UserRoutingLanguage[]**](UserRoutingLanguage.md) | Routing (ACD) languages possessed by the user | [optional] 
+**acdAutoAnswer** | **bool** | acd auto answer | [optional] 
+**languagePreference** | **string** | preferred language by the user | [optional] 
+**date** | [**\PureCloudPlatform\Client\V2\Model\ServerDate**](ServerDate.md) | The PureCloud system date time. | [optional] 
+**geolocationSettings** | [**\PureCloudPlatform\Client\V2\Model\GeolocationSettings**](GeolocationSettings.md) | Geolocation settings for user&#39;s organization. | [optional] 
+**organization** | [**\PureCloudPlatform\Client\V2\Model\Organization**](Organization.md) | Organization details for this user. | [optional] 
+**presenceDefinitions** | [**\PureCloudPlatform\Client\V2\Model\OrganizationPresence[]**](OrganizationPresence.md) | The first 100 presence definitions for user&#39;s organization. | [optional] 
+**locationDefinitions** | [**\PureCloudPlatform\Client\V2\Model\LocationDefinition[]**](LocationDefinition.md) | The first 100 site locations for user&#39;s organization | [optional] 
+**orgAuthorization** | [**\PureCloudPlatform\Client\V2\Model\DomainOrganizationRole[]**](DomainOrganizationRole.md) | The first 100 organization roles, with applicable permission policies, for user&#39;s organization. | [optional] 
+**favorites** | [**\PureCloudPlatform\Client\V2\Model\User[]**](User.md) | The first 50 favorited users. | [optional] 
+**superiors** | [**\PureCloudPlatform\Client\V2\Model\User[]**](User.md) | The first 50 superiors of this user. | [optional] 
+**directReports** | [**\PureCloudPlatform\Client\V2\Model\User[]**](User.md) | The first 50 direct reports to this user. | [optional] 
+**adjacents** | [**\PureCloudPlatform\Client\V2\Model\Adjacents**](Adjacents.md) | The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands. | [optional] 
+**routingSkills** | [**\PureCloudPlatform\Client\V2\Model\RoutingSkill[]**](RoutingSkill.md) | The first 50 routing skills for user&#39;s organizations | [optional] 
+**fieldConfigs** | [**\PureCloudPlatform\Client\V2\Model\FieldConfigs**](FieldConfigs.md) | The field config for all entities types of user&#39;s organization | [optional] 
+**token** | [**\PureCloudPlatform\Client\V2\Model\TokenInfo**](TokenInfo.md) | Information about the current token | [optional] 
+**trustors** | [**\PureCloudPlatform\Client\V2\Model\Trustor[]**](Trustor.md) | Organizations having this user as a trustee | [optional] 
+**orgProducts** | [**\PureCloudPlatform\Client\V2\Model\DomainOrganizationProduct[]**](DomainOrganizationProduct.md) | Products enabled in this organization | [optional] 
+**selfUri** | **string** | The URI for this object | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

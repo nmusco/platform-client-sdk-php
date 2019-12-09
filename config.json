@@ -1,0 +1,10 @@
+{
+	"sortParamsByRequiredFlag": true,
+	"ensureUniqueParams": true,
+	"allowUnicodeIdentifiers": false,
+	"variableNamingConvention": "camelCase",
+	"invokerPackage": "PureCloudPlatform\\Client\\V2",
+	"packagePath": "platform-client-sdk-php",
+	"composerVendorName": "Genesys",
+	"composerProjectName": "platform-client-sdk-php"
+}
