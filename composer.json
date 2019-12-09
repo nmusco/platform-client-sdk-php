@@ -1,5 +1,5 @@
 {
-    "name": "Genesys/platform-client-sdk-php",
+    "name": "nmusco/platform-client-sdk-php",
     "description": "",
     "keywords": [
         "swagger",
@@ -11,8 +11,8 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "Nicholas Musco",
+            "homepage": "https://github.com/nmusco/platform-client-sdk-php"
         }
     ],
     "require": {
