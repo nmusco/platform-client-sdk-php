@@ -60,7 +60,7 @@ use PureCloudPlatform\Client\V2\Api\VoicemailApi;
 use PureCloudPlatform\Client\V2\Api\WebChatApi;
 use PureCloudPlatform\Client\V2\Api\WidgetsApi;
 use PureCloudPlatform\Client\V2\Api\WorkforceManagementApi;
-use PureCloudPlatform\client\V2\Provider\Genesys as AuthProvider;
+use PureCloudPlatform\Client\V2\Provider\Genesys as AuthProvider;
 
 
 /**
@@ -140,8 +140,8 @@ class ApiClient
 		]);
 		
 		$this->options = [
-			'baseApiUrl' = $baseApiUrl,
-			'baseAuthUrl' = $baseAuthUrl,
+			'baseApiUrl' => $baseApiUrl,
+			'baseAuthUrl' => $baseAuthUrl,
 		];
 
 		if ($username !== '') {
@@ -787,7 +787,7 @@ class ApiClient
 	{
 		$configuration = \PureCloudPlatform\Client\V2\Configuration::getDefaultConfiguration();
 		$configuration->setAccessToken($this->getAccessToken()->getToken());
-		$configuration->setHost($this->options['baseApiUrl']);
+		$configuration->setHost('https://' . $this->options['baseApiUrl']);
 		return $configuration;
 	}
 }

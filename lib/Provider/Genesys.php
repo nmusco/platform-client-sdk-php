@@ -29,11 +29,11 @@ class Genesys extends AbstractProvider
     public function getBaseAccessTokenUrl(array $params)
     {
         if(isset($params['baseUrl']))
-            $baseUrl = $params['baseUrl'];
+            $this->baseUrl = $params['baseUrl'];
         else
-            $baseUrl = self::DEFAULT_LOGIN_BASE_URL;
+            $this->baseUrl = self::DEFAULT_LOGIN_BASE_URL;
         
-        return 'https://' . $baseUrl . self::PATH_TOKEN;
+        return 'https://' . $this->baseUrl . self::PATH_TOKEN;
     }
 
     /**
@@ -44,7 +44,7 @@ class Genesys extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {      
-        return 'https://' . self::DEFAULT_LOGIN_BASE_URL . self::PATH_AUTHORIZATION;
+        return 'https://' . $this->baseUrl . self::PATH_AUTHORIZATION;
     }
 
     /**
