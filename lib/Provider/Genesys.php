@@ -22,6 +22,12 @@ class Genesys extends AbstractProvider
 
     /**
      *
+     * @var TokenStorageInterface
+     */
+    protected $baseUrl;
+
+    /**
+     *
      * {@inheritdoc}
      *
      * @see \League\OAuth2\Client\Provider\AbstractProvider::getBaseAccessTokenUrl()
