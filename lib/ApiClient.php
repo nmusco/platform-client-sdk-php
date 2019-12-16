@@ -123,22 +123,24 @@ class ApiClient
      *
      * @throws Exception
      */
-    public function __construct(string $baseApiUrl, string $baseAuthUrl, string $client_id, string $client_secret, string $username = '', string $password = '', $handler = null, TokenStorageInterface $tokenRepository = null)
-    {
+	public function __construct(string $baseApiUrl, string $baseAuthUrl, string $client_id, string $client_secret, string $username = '', string $password = '', $handler = null, TokenStorageInterface $tokenRepository = null)
+	{
 		$this->tokenRepository = $tokenRepository;
 		$this->clientId = $client_id;
 
-        $client = new HttpClient([
-            'handler' => $handler
-        ]);
-
-        $this->authProvider = new AuthProvider([
-            'clientId' => $client_id,
-            'clientSecret' => $client_secret
-        ], [
-            'httpClient' => $client
+		$client = new HttpClient([
+			'handler' => $handler
 		]);
-		
+
+		$this->authProvider = new AuthProvider(
+			[
+				'clientId' => $client_id,
+				'clientSecret' => $client_secret,
+			], [
+				'httpClient' => $client,
+			]
+		);
+
 		$this->options = [
 			'baseApiUrl' => $baseApiUrl,
 			'baseAuthUrl' => $baseAuthUrl,
@@ -147,27 +149,27 @@ class ApiClient
 		if ($username !== '') {
 			$this->options['username'] = $username;
 		}
-		
+
 		if ($password !== '') {
 			$this->options['password'] = $password;
 		}
 	}
-	
+
 	public function getAccessToken(): AccessToken
-    {
+	{
 		$tokenId = sprintf('genesys-client-%s', $this->clientId);
 		if (isset($this->options['username'])) {
 			$tokenId = sprintf('genesys-user-%s', $this->options['username']);
 		}
 
-        if ($this->accessToken === null) {
-            if ($this->tokenRepository !== null) {
-                try {
-                	$this->accessToken = $this->tokenRepository->loadToken($tokenId);
-                } catch(TokenNotFoundException $e) {}
-            }
+		if ($this->accessToken === null) {
+			if ($this->tokenRepository !== null) {
+				try {
+					$this->accessToken = $this->tokenRepository->loadToken($tokenId);
+				} catch(TokenNotFoundException $e) {}
+			}
 
-            if ($this->accessToken === null) {
+			if ($this->accessToken === null) {
 				if (!isset($this->options['username'])) {
 					$options = [
 						'baseUrl' => $this->options['baseAuthUrl'],
@@ -180,7 +182,7 @@ class ApiClient
 						'username' => $this->options['username'],
 						'password' => '',
 					];
-					
+
 					if (isset($this->options['password'])) {
 						$options['password'] = $this->options['password'];
 					}
@@ -188,23 +190,23 @@ class ApiClient
 					$this->accessToken = $this->authProvider->getAccessToken('password', $options);
 				}
 
-                if ($this->tokenRepository !== null) {
-                    $this->tokenRepository->storeToken($this->accessToken, $tokenId);
-                }
-            }
-        }
-
-        if ($this->accessToken->hasExpired() === true) {
-            $this->accessToken = $this->authProvider->getAccessToken('refresh_token', [
-                'refresh_token' => $this->accessToken->getRefreshToken()
-			]);
-			
-            if ($this->tokenRepository !== null) {
-                $this->tokenRepository->storeToken($this->accessToken, $tokenId);
-            }
+				if ($this->tokenRepository !== null) {
+					$this->tokenRepository->storeToken($this->accessToken, $tokenId);
+				}
+			}
 		}
-		
-        return $this->accessToken;
+
+		if ($this->accessToken->hasExpired() === true) {
+			$this->accessToken = $this->authProvider->getAccessToken('refresh_token', [
+				'refresh_token' => $this->accessToken->getRefreshToken()
+			]);
+
+			if ($this->tokenRepository !== null) {
+				$this->tokenRepository->storeToken($this->accessToken, $tokenId);
+			}
+		}
+
+		return $this->accessToken;
 	}
 	
 	public function getAlertingApi() : AlertingApi
