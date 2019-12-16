@@ -1841,7 +1841,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserEntityListing
      */
-    public function getGroupMembers($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getGroupMembers($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         list($response) = $this->getGroupMembersWithHttpInfo($groupId, $pageSize, $pageNumber, $sortOrder, $expand);
         return $response;
@@ -1862,7 +1862,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getGroupMembersWithHttpInfo($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getGroupMembersWithHttpInfo($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getGroupMembersRequest($groupId, $pageSize, $pageNumber, $sortOrder, $expand);
@@ -2020,7 +2020,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getGroupMembersAsync($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getGroupMembersAsync($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         return $this->getGroupMembersAsyncWithHttpInfo($groupId, $pageSize, $pageNumber, $sortOrder, $expand)
             ->then(
@@ -2044,7 +2044,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getGroupMembersAsyncWithHttpInfo($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getGroupMembersAsyncWithHttpInfo($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getGroupMembersRequest($groupId, $pageSize, $pageNumber, $sortOrder, $expand);
@@ -2098,7 +2098,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getGroupMembersRequest($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    protected function getGroupMembersRequest($groupId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         // verify the required parameter 'groupId' is set
         if ($groupId === null || (is_array($groupId) && count($groupId) === 0)) {
@@ -2595,7 +2595,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\GroupEntityListing
      */
-    public function getGroups($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC')
+    public function getGroups($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getGroupsWithHttpInfo($pageSize, $pageNumber, $id, $jabberId, $sortOrder);
         return $response;
@@ -2616,7 +2616,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\GroupEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getGroupsWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC')
+    public function getGroupsWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\GroupEntityListing';
         $request = $this->getGroupsRequest($pageSize, $pageNumber, $id, $jabberId, $sortOrder);
@@ -2774,7 +2774,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getGroupsAsync($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC')
+    public function getGroupsAsync($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending')
     {
         return $this->getGroupsAsyncWithHttpInfo($pageSize, $pageNumber, $id, $jabberId, $sortOrder)
             ->then(
@@ -2798,7 +2798,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getGroupsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC')
+    public function getGroupsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\GroupEntityListing';
         $request = $this->getGroupsRequest($pageSize, $pageNumber, $id, $jabberId, $sortOrder);
@@ -2852,7 +2852,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getGroupsRequest($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC')
+    protected function getGroupsRequest($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/groups';
@@ -3340,7 +3340,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\GroupProfileEntityListing
      */
-    public function getProfilesGroups($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ASC')
+    public function getProfilesGroups($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getProfilesGroupsWithHttpInfo($pageSize, $pageNumber, $id, $sortOrder);
         return $response;
@@ -3360,7 +3360,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\GroupProfileEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProfilesGroupsWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ASC')
+    public function getProfilesGroupsWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\GroupProfileEntityListing';
         $request = $this->getProfilesGroupsRequest($pageSize, $pageNumber, $id, $sortOrder);
@@ -3517,7 +3517,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProfilesGroupsAsync($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ASC')
+    public function getProfilesGroupsAsync($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ascending')
     {
         return $this->getProfilesGroupsAsyncWithHttpInfo($pageSize, $pageNumber, $id, $sortOrder)
             ->then(
@@ -3540,7 +3540,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProfilesGroupsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ASC')
+    public function getProfilesGroupsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\GroupProfileEntityListing';
         $request = $this->getProfilesGroupsRequest($pageSize, $pageNumber, $id, $sortOrder);
@@ -3593,7 +3593,7 @@ class GroupsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProfilesGroupsRequest($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ASC')
+    protected function getProfilesGroupsRequest($pageSize = '25', $pageNumber = '1', $id = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/profiles/groups';

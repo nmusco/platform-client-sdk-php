@@ -10590,7 +10590,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\TrunkEntityListing
      */
-    public function getTelephonyProvidersEdgeTrunks($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgeTrunks($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $trunkBaseId = null, $trunkType = null)
     {
         list($response) = $this->getTelephonyProvidersEdgeTrunksWithHttpInfo($edgeId, $pageNumber, $pageSize, $sortBy, $sortOrder, $trunkBaseId, $trunkType);
         return $response;
@@ -10613,7 +10613,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\TrunkEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgeTrunksWithHttpInfo($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgeTrunksWithHttpInfo($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $trunkBaseId = null, $trunkType = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkEntityListing';
         $request = $this->getTelephonyProvidersEdgeTrunksRequest($edgeId, $pageNumber, $pageSize, $sortBy, $sortOrder, $trunkBaseId, $trunkType);
@@ -10773,7 +10773,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgeTrunksAsync($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgeTrunksAsync($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $trunkBaseId = null, $trunkType = null)
     {
         return $this->getTelephonyProvidersEdgeTrunksAsyncWithHttpInfo($edgeId, $pageNumber, $pageSize, $sortBy, $sortOrder, $trunkBaseId, $trunkType)
             ->then(
@@ -10799,7 +10799,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgeTrunksAsyncWithHttpInfo($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgeTrunksAsyncWithHttpInfo($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $trunkBaseId = null, $trunkType = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkEntityListing';
         $request = $this->getTelephonyProvidersEdgeTrunksRequest($edgeId, $pageNumber, $pageSize, $sortBy, $sortOrder, $trunkBaseId, $trunkType);
@@ -10855,7 +10855,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgeTrunksRequest($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $trunkBaseId = null, $trunkType = null)
+    protected function getTelephonyProvidersEdgeTrunksRequest($edgeId, $pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $trunkBaseId = null, $trunkType = null)
     {
         // verify the required parameter 'edgeId' is set
         if ($edgeId === null || (is_array($edgeId) && count($edgeId) === 0)) {
@@ -13482,7 +13482,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\DIDEntityListing
      */
-    public function getTelephonyProvidersEdgesDids($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $phoneNumber = null, $ownerId = null, $didPoolId = null)
+    public function getTelephonyProvidersEdgesDids($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $phoneNumber = null, $ownerId = null, $didPoolId = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesDidsWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $phoneNumber, $ownerId, $didPoolId);
         return $response;
@@ -13505,7 +13505,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\DIDEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesDidsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $phoneNumber = null, $ownerId = null, $didPoolId = null)
+    public function getTelephonyProvidersEdgesDidsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $phoneNumber = null, $ownerId = null, $didPoolId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DIDEntityListing';
         $request = $this->getTelephonyProvidersEdgesDidsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $phoneNumber, $ownerId, $didPoolId);
@@ -13665,7 +13665,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesDidsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $phoneNumber = null, $ownerId = null, $didPoolId = null)
+    public function getTelephonyProvidersEdgesDidsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $phoneNumber = null, $ownerId = null, $didPoolId = null)
     {
         return $this->getTelephonyProvidersEdgesDidsAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $phoneNumber, $ownerId, $didPoolId)
             ->then(
@@ -13691,7 +13691,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesDidsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $phoneNumber = null, $ownerId = null, $didPoolId = null)
+    public function getTelephonyProvidersEdgesDidsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $phoneNumber = null, $ownerId = null, $didPoolId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DIDEntityListing';
         $request = $this->getTelephonyProvidersEdgesDidsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $phoneNumber, $ownerId, $didPoolId);
@@ -13747,7 +13747,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesDidsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $phoneNumber = null, $ownerId = null, $didPoolId = null)
+    protected function getTelephonyProvidersEdgesDidsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $phoneNumber = null, $ownerId = null, $didPoolId = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/dids';
@@ -16403,7 +16403,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ExtensionEntityListing
      */
-    public function getTelephonyProvidersEdgesExtensions($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $number = null)
+    public function getTelephonyProvidersEdgesExtensions($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $number = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesExtensionsWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $number);
         return $response;
@@ -16424,7 +16424,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ExtensionEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesExtensionsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $number = null)
+    public function getTelephonyProvidersEdgesExtensionsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $number = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ExtensionEntityListing';
         $request = $this->getTelephonyProvidersEdgesExtensionsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $number);
@@ -16582,7 +16582,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesExtensionsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $number = null)
+    public function getTelephonyProvidersEdgesExtensionsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $number = null)
     {
         return $this->getTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $number)
             ->then(
@@ -16606,7 +16606,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $number = null)
+    public function getTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $number = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ExtensionEntityListing';
         $request = $this->getTelephonyProvidersEdgesExtensionsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $number);
@@ -16660,7 +16660,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesExtensionsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ASC', $number = null)
+    protected function getTelephonyProvidersEdgesExtensionsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'number', $sortOrder = 'ascending', $number = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/extensions';
@@ -17487,7 +17487,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\LineBaseEntityListing
      */
-    public function getTelephonyProvidersEdgesLinebasesettings($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC')
+    public function getTelephonyProvidersEdgesLinebasesettings($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending')
     {
         list($response) = $this->getTelephonyProvidersEdgesLinebasesettingsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder);
         return $response;
@@ -17507,7 +17507,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\LineBaseEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesLinebasesettingsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC')
+    public function getTelephonyProvidersEdgesLinebasesettingsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LineBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesLinebasesettingsRequest($pageNumber, $pageSize, $sortBy, $sortOrder);
@@ -17664,7 +17664,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesLinebasesettingsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC')
+    public function getTelephonyProvidersEdgesLinebasesettingsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending')
     {
         return $this->getTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder)
             ->then(
@@ -17687,7 +17687,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC')
+    public function getTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LineBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesLinebasesettingsRequest($pageNumber, $pageSize, $sortBy, $sortOrder);
@@ -17740,7 +17740,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesLinebasesettingsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC')
+    protected function getTelephonyProvidersEdgesLinebasesettingsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/linebasesettings';
@@ -20747,7 +20747,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\PhoneBaseEntityListing
      */
-    public function getTelephonyProvidersEdgesPhonebasesettings($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesPhonebasesettings($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $expand = null, $name = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $expand, $name);
         return $response;
@@ -20769,7 +20769,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\PhoneBaseEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $expand = null, $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PhoneBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesPhonebasesettingsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $expand, $name);
@@ -20928,7 +20928,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesPhonebasesettingsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesPhonebasesettingsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $expand = null, $name = null)
     {
         return $this->getTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $expand, $name)
             ->then(
@@ -20953,7 +20953,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $expand = null, $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PhoneBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesPhonebasesettingsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $expand, $name);
@@ -21008,7 +21008,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesPhonebasesettingsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $expand = null, $name = null)
+    protected function getTelephonyProvidersEdgesPhonebasesettingsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $expand = null, $name = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/phonebasesettings';
@@ -21848,7 +21848,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\PhoneEntityListing
      */
-    public function getTelephonyProvidersEdgesPhones($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
+    public function getTelephonyProvidersEdgesPhones($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesPhonesWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $siteId, $webRtcUserId, $phoneBaseSettingsId, $linesLoggedInUserId, $linesDefaultForUserId, $phoneHardwareId, $linesId, $linesName, $name, $expand, $fields);
         return $response;
@@ -21879,7 +21879,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\PhoneEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesPhonesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
+    public function getTelephonyProvidersEdgesPhonesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PhoneEntityListing';
         $request = $this->getTelephonyProvidersEdgesPhonesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $siteId, $webRtcUserId, $phoneBaseSettingsId, $linesLoggedInUserId, $linesDefaultForUserId, $phoneHardwareId, $linesId, $linesName, $name, $expand, $fields);
@@ -22047,7 +22047,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesPhonesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
+    public function getTelephonyProvidersEdgesPhonesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
     {
         return $this->getTelephonyProvidersEdgesPhonesAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $siteId, $webRtcUserId, $phoneBaseSettingsId, $linesLoggedInUserId, $linesDefaultForUserId, $phoneHardwareId, $linesId, $linesName, $name, $expand, $fields)
             ->then(
@@ -22081,7 +22081,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesPhonesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
+    public function getTelephonyProvidersEdgesPhonesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PhoneEntityListing';
         $request = $this->getTelephonyProvidersEdgesPhonesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $siteId, $webRtcUserId, $phoneBaseSettingsId, $linesLoggedInUserId, $linesDefaultForUserId, $phoneHardwareId, $linesId, $linesName, $name, $expand, $fields);
@@ -22145,7 +22145,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesPhonesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
+    protected function getTelephonyProvidersEdgesPhonesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $siteId = null, $webRtcUserId = null, $phoneBaseSettingsId = null, $linesLoggedInUserId = null, $linesDefaultForUserId = null, $phoneHardwareId = null, $linesId = null, $linesName = null, $name = null, $expand = null, $fields = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/phones';
@@ -25223,7 +25223,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\SiteEntityListing
      */
-    public function getTelephonyProvidersEdgesSites($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $name = null, $locationId = null, $managed = null)
+    public function getTelephonyProvidersEdgesSites($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $locationId = null, $managed = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesSitesWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $locationId, $managed);
         return $response;
@@ -25246,7 +25246,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\SiteEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesSitesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $name = null, $locationId = null, $managed = null)
+    public function getTelephonyProvidersEdgesSitesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $locationId = null, $managed = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SiteEntityListing';
         $request = $this->getTelephonyProvidersEdgesSitesRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $locationId, $managed);
@@ -25406,7 +25406,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesSitesAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $name = null, $locationId = null, $managed = null)
+    public function getTelephonyProvidersEdgesSitesAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $locationId = null, $managed = null)
     {
         return $this->getTelephonyProvidersEdgesSitesAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $locationId, $managed)
             ->then(
@@ -25432,7 +25432,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesSitesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $name = null, $locationId = null, $managed = null)
+    public function getTelephonyProvidersEdgesSitesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $locationId = null, $managed = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SiteEntityListing';
         $request = $this->getTelephonyProvidersEdgesSitesRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $locationId, $managed);
@@ -25488,7 +25488,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesSitesRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ASC', $name = null, $locationId = null, $managed = null)
+    protected function getTelephonyProvidersEdgesSitesRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $locationId = null, $managed = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/sites';
@@ -27042,7 +27042,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\TrunkBaseEntityListing
      */
-    public function getTelephonyProvidersEdgesTrunkbasesettings($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesTrunkbasesettings($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $recordingEnabled, $ignoreHidden, $managed, $expand, $name);
         return $response;
@@ -27067,7 +27067,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\TrunkBaseEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesTrunkbasesettingsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $recordingEnabled, $ignoreHidden, $managed, $expand, $name);
@@ -27229,7 +27229,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesTrunkbasesettingsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesTrunkbasesettingsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
     {
         return $this->getTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $recordingEnabled, $ignoreHidden, $managed, $expand, $name)
             ->then(
@@ -27257,7 +27257,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
+    public function getTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkBaseEntityListing';
         $request = $this->getTelephonyProvidersEdgesTrunkbasesettingsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $recordingEnabled, $ignoreHidden, $managed, $expand, $name);
@@ -27315,7 +27315,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesTrunkbasesettingsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
+    protected function getTelephonyProvidersEdgesTrunkbasesettingsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $recordingEnabled = null, $ignoreHidden = null, $managed = null, $expand = null, $name = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/trunkbasesettings';
@@ -28168,7 +28168,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\TrunkEntityListing
      */
-    public function getTelephonyProvidersEdgesTrunks($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $edgeId = null, $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgesTrunks($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $edgeId = null, $trunkBaseId = null, $trunkType = null)
     {
         list($response) = $this->getTelephonyProvidersEdgesTrunksWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $edgeId, $trunkBaseId, $trunkType);
         return $response;
@@ -28191,7 +28191,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\TrunkEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getTelephonyProvidersEdgesTrunksWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $edgeId = null, $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgesTrunksWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $edgeId = null, $trunkBaseId = null, $trunkType = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkEntityListing';
         $request = $this->getTelephonyProvidersEdgesTrunksRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $edgeId, $trunkBaseId, $trunkType);
@@ -28351,7 +28351,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesTrunksAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $edgeId = null, $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgesTrunksAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $edgeId = null, $trunkBaseId = null, $trunkType = null)
     {
         return $this->getTelephonyProvidersEdgesTrunksAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $edgeId, $trunkBaseId, $trunkType)
             ->then(
@@ -28377,7 +28377,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getTelephonyProvidersEdgesTrunksAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $edgeId = null, $trunkBaseId = null, $trunkType = null)
+    public function getTelephonyProvidersEdgesTrunksAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $edgeId = null, $trunkBaseId = null, $trunkType = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\TrunkEntityListing';
         $request = $this->getTelephonyProvidersEdgesTrunksRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $edgeId, $trunkBaseId, $trunkType);
@@ -28433,7 +28433,7 @@ class TelephonyProvidersEdgeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getTelephonyProvidersEdgesTrunksRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $edgeId = null, $trunkBaseId = null, $trunkType = null)
+    protected function getTelephonyProvidersEdgesTrunksRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $edgeId = null, $trunkBaseId = null, $trunkType = null)
     {
 
         $resourcePath = '/api/v2/telephony/providers/edges/trunks';

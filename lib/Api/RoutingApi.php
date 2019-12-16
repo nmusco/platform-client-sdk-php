@@ -5452,7 +5452,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\LanguageEntityListing
      */
-    public function getRoutingLanguages($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null, $id = null)
+    public function getRoutingLanguages($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null, $id = null)
     {
         list($response) = $this->getRoutingLanguagesWithHttpInfo($pageSize, $pageNumber, $sortOrder, $name, $id);
         return $response;
@@ -5473,7 +5473,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\LanguageEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRoutingLanguagesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null, $id = null)
+    public function getRoutingLanguagesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null, $id = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LanguageEntityListing';
         $request = $this->getRoutingLanguagesRequest($pageSize, $pageNumber, $sortOrder, $name, $id);
@@ -5631,7 +5631,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingLanguagesAsync($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null, $id = null)
+    public function getRoutingLanguagesAsync($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null, $id = null)
     {
         return $this->getRoutingLanguagesAsyncWithHttpInfo($pageSize, $pageNumber, $sortOrder, $name, $id)
             ->then(
@@ -5655,7 +5655,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingLanguagesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null, $id = null)
+    public function getRoutingLanguagesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null, $id = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LanguageEntityListing';
         $request = $this->getRoutingLanguagesRequest($pageSize, $pageNumber, $sortOrder, $name, $id);
@@ -5709,7 +5709,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getRoutingLanguagesRequest($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null, $id = null)
+    protected function getRoutingLanguagesRequest($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null, $id = null)
     {
 
         $resourcePath = '/api/v2/routing/languages';
@@ -8872,7 +8872,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\QueueEntityListing
      */
-    public function getRoutingQueuesDivisionviews($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc', $name = null, $id = null, $divisionId = null)
+    public function getRoutingQueuesDivisionviews($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $id = null, $divisionId = null)
     {
         list($response) = $this->getRoutingQueuesDivisionviewsWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $id, $divisionId);
         return $response;
@@ -8895,7 +8895,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\QueueEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRoutingQueuesDivisionviewsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc', $name = null, $id = null, $divisionId = null)
+    public function getRoutingQueuesDivisionviewsWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $id = null, $divisionId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\QueueEntityListing';
         $request = $this->getRoutingQueuesDivisionviewsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $id, $divisionId);
@@ -9055,7 +9055,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesDivisionviewsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc', $name = null, $id = null, $divisionId = null)
+    public function getRoutingQueuesDivisionviewsAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $id = null, $divisionId = null)
     {
         return $this->getRoutingQueuesDivisionviewsAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $id, $divisionId)
             ->then(
@@ -9081,7 +9081,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesDivisionviewsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc', $name = null, $id = null, $divisionId = null)
+    public function getRoutingQueuesDivisionviewsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $id = null, $divisionId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\QueueEntityListing';
         $request = $this->getRoutingQueuesDivisionviewsRequest($pageSize, $pageNumber, $sortBy, $sortOrder, $name, $id, $divisionId);
@@ -9137,7 +9137,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getRoutingQueuesDivisionviewsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc', $name = null, $id = null, $divisionId = null)
+    protected function getRoutingQueuesDivisionviewsRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending', $name = null, $id = null, $divisionId = null)
     {
 
         $resourcePath = '/api/v2/routing/queues/divisionviews';
@@ -9272,7 +9272,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\QueueEntityListing
      */
-    public function getRoutingQueuesDivisionviewsAll($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesDivisionviewsAll($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         list($response) = $this->getRoutingQueuesDivisionviewsAllWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder);
         return $response;
@@ -9292,7 +9292,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\QueueEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRoutingQueuesDivisionviewsAllWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesDivisionviewsAllWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\QueueEntityListing';
         $request = $this->getRoutingQueuesDivisionviewsAllRequest($pageSize, $pageNumber, $sortBy, $sortOrder);
@@ -9449,7 +9449,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesDivisionviewsAllAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesDivisionviewsAllAsync($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         return $this->getRoutingQueuesDivisionviewsAllAsyncWithHttpInfo($pageSize, $pageNumber, $sortBy, $sortOrder)
             ->then(
@@ -9472,7 +9472,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesDivisionviewsAllAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesDivisionviewsAllAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\QueueEntityListing';
         $request = $this->getRoutingQueuesDivisionviewsAllRequest($pageSize, $pageNumber, $sortBy, $sortOrder);
@@ -9525,7 +9525,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getRoutingQueuesDivisionviewsAllRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    protected function getRoutingQueuesDivisionviewsAllRequest($pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/routing/queues/divisionviews/all';
@@ -9643,7 +9643,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserQueueEntityListing
      */
-    public function getRoutingQueuesMe($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesMe($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         list($response) = $this->getRoutingQueuesMeWithHttpInfo($joined, $pageSize, $pageNumber, $sortBy, $sortOrder);
         return $response;
@@ -9664,7 +9664,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserQueueEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getRoutingQueuesMeWithHttpInfo($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesMeWithHttpInfo($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserQueueEntityListing';
         $request = $this->getRoutingQueuesMeRequest($joined, $pageSize, $pageNumber, $sortBy, $sortOrder);
@@ -9822,7 +9822,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesMeAsync($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesMeAsync($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         return $this->getRoutingQueuesMeAsyncWithHttpInfo($joined, $pageSize, $pageNumber, $sortBy, $sortOrder)
             ->then(
@@ -9846,7 +9846,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getRoutingQueuesMeAsyncWithHttpInfo($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    public function getRoutingQueuesMeAsyncWithHttpInfo($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserQueueEntityListing';
         $request = $this->getRoutingQueuesMeRequest($joined, $pageSize, $pageNumber, $sortBy, $sortOrder);
@@ -9900,7 +9900,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getRoutingQueuesMeRequest($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'asc')
+    protected function getRoutingQueuesMeRequest($joined = null, $pageSize = '25', $pageNumber = '1', $sortBy = 'name', $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/routing/queues/me';
@@ -13650,7 +13650,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing
      */
-    public function getUserRoutinglanguages($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguages($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         list($response) = $this->getUserRoutinglanguagesWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder);
         return $response;
@@ -13670,7 +13670,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserRoutinglanguagesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing';
         $request = $this->getUserRoutinglanguagesRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -13827,7 +13827,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutinglanguagesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         return $this->getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder)
             ->then(
@@ -13850,7 +13850,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing';
         $request = $this->getUserRoutinglanguagesRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -13903,7 +13903,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserRoutinglanguagesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    protected function getUserRoutinglanguagesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         // verify the required parameter 'userId' is set
         if ($userId === null || (is_array($userId) && count($userId) === 0)) {
@@ -14030,7 +14030,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserSkillEntityListing
      */
-    public function getUserRoutingskills($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskills($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         list($response) = $this->getUserRoutingskillsWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder);
         return $response;
@@ -14050,7 +14050,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserSkillEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserRoutingskillsWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserSkillEntityListing';
         $request = $this->getUserRoutingskillsRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -14207,7 +14207,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutingskillsAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         return $this->getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder)
             ->then(
@@ -14230,7 +14230,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserSkillEntityListing';
         $request = $this->getUserRoutingskillsRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -14283,7 +14283,7 @@ class RoutingApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserRoutingskillsRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    protected function getUserRoutingskillsRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         // verify the required parameter 'userId' is set
         if ($userId === null || (is_array($userId) && count($userId) === 0)) {

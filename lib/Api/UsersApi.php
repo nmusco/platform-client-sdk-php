@@ -4207,7 +4207,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserProfileEntityListing
      */
-    public function getProfilesUsers($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ASC', $expand = null)
+    public function getProfilesUsers($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ascending', $expand = null)
     {
         list($response) = $this->getProfilesUsersWithHttpInfo($pageSize, $pageNumber, $id, $jid, $sortOrder, $expand);
         return $response;
@@ -4229,7 +4229,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserProfileEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProfilesUsersWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ASC', $expand = null)
+    public function getProfilesUsersWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserProfileEntityListing';
         $request = $this->getProfilesUsersRequest($pageSize, $pageNumber, $id, $jid, $sortOrder, $expand);
@@ -4388,7 +4388,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProfilesUsersAsync($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ASC', $expand = null)
+    public function getProfilesUsersAsync($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ascending', $expand = null)
     {
         return $this->getProfilesUsersAsyncWithHttpInfo($pageSize, $pageNumber, $id, $jid, $sortOrder, $expand)
             ->then(
@@ -4413,7 +4413,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProfilesUsersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ASC', $expand = null)
+    public function getProfilesUsersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserProfileEntityListing';
         $request = $this->getProfilesUsersRequest($pageSize, $pageNumber, $id, $jid, $sortOrder, $expand);
@@ -4468,7 +4468,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProfilesUsersRequest($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ASC', $expand = null)
+    protected function getProfilesUsersRequest($pageSize = '25', $pageNumber = '1', $id = null, $jid = null, $sortOrder = 'ascending', $expand = null)
     {
 
         $resourcePath = '/api/v2/profiles/users';
@@ -6060,7 +6060,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserEntityListing
      */
-    public function getUserFavorites($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getUserFavorites($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         list($response) = $this->getUserFavoritesWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder, $expand);
         return $response;
@@ -6081,7 +6081,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserFavoritesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getUserFavoritesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getUserFavoritesRequest($userId, $pageSize, $pageNumber, $sortOrder, $expand);
@@ -6239,7 +6239,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserFavoritesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getUserFavoritesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         return $this->getUserFavoritesAsyncWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder, $expand)
             ->then(
@@ -6263,7 +6263,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserFavoritesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    public function getUserFavoritesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getUserFavoritesRequest($userId, $pageSize, $pageNumber, $sortOrder, $expand);
@@ -6317,7 +6317,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserFavoritesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $expand = null)
+    protected function getUserFavoritesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $expand = null)
     {
         // verify the required parameter 'userId' is set
         if ($userId === null || (is_array($userId) && count($userId) === 0)) {
@@ -8639,7 +8639,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing
      */
-    public function getUserRoutinglanguages($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguages($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         list($response) = $this->getUserRoutinglanguagesWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder);
         return $response;
@@ -8659,7 +8659,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserRoutinglanguagesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing';
         $request = $this->getUserRoutinglanguagesRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -8816,7 +8816,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutinglanguagesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         return $this->getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder)
             ->then(
@@ -8839,7 +8839,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutinglanguagesAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserLanguageEntityListing';
         $request = $this->getUserRoutinglanguagesRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -8892,7 +8892,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserRoutinglanguagesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    protected function getUserRoutinglanguagesRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         // verify the required parameter 'userId' is set
         if ($userId === null || (is_array($userId) && count($userId) === 0)) {
@@ -9019,7 +9019,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserSkillEntityListing
      */
-    public function getUserRoutingskills($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskills($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         list($response) = $this->getUserRoutingskillsWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder);
         return $response;
@@ -9039,7 +9039,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserSkillEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserRoutingskillsWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserSkillEntityListing';
         $request = $this->getUserRoutingskillsRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -9196,7 +9196,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutingskillsAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsAsync($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         return $this->getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize, $pageNumber, $sortOrder)
             ->then(
@@ -9219,7 +9219,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    public function getUserRoutingskillsAsyncWithHttpInfo($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserSkillEntityListing';
         $request = $this->getUserRoutingskillsRequest($userId, $pageSize, $pageNumber, $sortOrder);
@@ -9272,7 +9272,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUserRoutingskillsRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC')
+    protected function getUserRoutingskillsRequest($userId, $pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending')
     {
         // verify the required parameter 'userId' is set
         if ($userId === null || (is_array($userId) && count($userId) === 0)) {
@@ -10844,7 +10844,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\UserEntityListing
      */
-    public function getUsers($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC', $expand = null, $state = 'active')
+    public function getUsers($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending', $expand = null, $state = 'active')
     {
         list($response) = $this->getUsersWithHttpInfo($pageSize, $pageNumber, $id, $jabberId, $sortOrder, $expand, $state);
         return $response;
@@ -10867,7 +10867,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\UserEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUsersWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC', $expand = null, $state = 'active')
+    public function getUsersWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending', $expand = null, $state = 'active')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getUsersRequest($pageSize, $pageNumber, $id, $jabberId, $sortOrder, $expand, $state);
@@ -11027,7 +11027,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUsersAsync($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC', $expand = null, $state = 'active')
+    public function getUsersAsync($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending', $expand = null, $state = 'active')
     {
         return $this->getUsersAsyncWithHttpInfo($pageSize, $pageNumber, $id, $jabberId, $sortOrder, $expand, $state)
             ->then(
@@ -11053,7 +11053,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUsersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC', $expand = null, $state = 'active')
+    public function getUsersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending', $expand = null, $state = 'active')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\UserEntityListing';
         $request = $this->getUsersRequest($pageSize, $pageNumber, $id, $jabberId, $sortOrder, $expand, $state);
@@ -11109,7 +11109,7 @@ class UsersApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getUsersRequest($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ASC', $expand = null, $state = 'active')
+    protected function getUsersRequest($pageSize = '25', $pageNumber = '1', $id = null, $jabberId = null, $sortOrder = 'ascending', $expand = null, $state = 'active')
     {
 
         $resourcePath = '/api/v2/users';

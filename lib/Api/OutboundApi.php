@@ -5593,7 +5593,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\AttemptLimitsEntityListing
      */
-    public function getOutboundAttemptlimits($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundAttemptlimits($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundAttemptlimitsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -5615,7 +5615,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\AttemptLimitsEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundAttemptlimitsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundAttemptlimitsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\AttemptLimitsEntityListing';
         $request = $this->getOutboundAttemptlimitsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -5774,7 +5774,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundAttemptlimitsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundAttemptlimitsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundAttemptlimitsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -5799,7 +5799,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundAttemptlimitsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundAttemptlimitsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\AttemptLimitsEntityListing';
         $request = $this->getOutboundAttemptlimitsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -5854,7 +5854,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundAttemptlimitsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundAttemptlimitsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/attemptlimits';
@@ -6334,7 +6334,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CallableTimeSetEntityListing
      */
-    public function getOutboundCallabletimesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallabletimesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundCallabletimesetsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -6356,7 +6356,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CallableTimeSetEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundCallabletimesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallabletimesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CallableTimeSetEntityListing';
         $request = $this->getOutboundCallabletimesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -6515,7 +6515,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCallabletimesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallabletimesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundCallabletimesetsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -6540,7 +6540,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCallabletimesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallabletimesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CallableTimeSetEntityListing';
         $request = $this->getOutboundCallabletimesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -6595,7 +6595,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundCallabletimesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundCallabletimesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/callabletimesets';
@@ -7075,7 +7075,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ResponseSetEntityListing
      */
-    public function getOutboundCallanalysisresponsesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallanalysisresponsesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundCallanalysisresponsesetsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -7097,7 +7097,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ResponseSetEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundCallanalysisresponsesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallanalysisresponsesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ResponseSetEntityListing';
         $request = $this->getOutboundCallanalysisresponsesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -7256,7 +7256,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCallanalysisresponsesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallanalysisresponsesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundCallanalysisresponsesetsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -7281,7 +7281,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCallanalysisresponsesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCallanalysisresponsesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ResponseSetEntityListing';
         $request = $this->getOutboundCallanalysisresponsesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -7336,7 +7336,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundCallanalysisresponsesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundCallanalysisresponsesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/callanalysisresponsesets';
@@ -9581,7 +9581,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CampaignRuleEntityListing
      */
-    public function getOutboundCampaignrules($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignrules($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundCampaignrulesWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -9603,7 +9603,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CampaignRuleEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundCampaignrulesWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignrulesWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignRuleEntityListing';
         $request = $this->getOutboundCampaignrulesRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -9762,7 +9762,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignrulesAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignrulesAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundCampaignrulesAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -9787,7 +9787,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignrulesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignrulesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignRuleEntityListing';
         $request = $this->getOutboundCampaignrulesRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -9842,7 +9842,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundCampaignrulesRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundCampaignrulesRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/campaignrules';
@@ -9976,7 +9976,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CampaignEntityListing
      */
-    public function getOutboundCampaigns($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaigns($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundCampaignsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $id, $contactListId, $dncListIds, $distributionQueueId, $edgeGroupId, $callAnalysisResponseSetId, $divisionId, $sortBy, $sortOrder);
         return $response;
@@ -10005,7 +10005,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CampaignEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundCampaignsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignEntityListing';
         $request = $this->getOutboundCampaignsRequest($pageSize, $pageNumber, $filterType, $name, $id, $contactListId, $dncListIds, $distributionQueueId, $edgeGroupId, $callAnalysisResponseSetId, $divisionId, $sortBy, $sortOrder);
@@ -10171,7 +10171,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundCampaignsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $id, $contactListId, $dncListIds, $distributionQueueId, $edgeGroupId, $callAnalysisResponseSetId, $divisionId, $sortBy, $sortOrder)
             ->then(
@@ -10203,7 +10203,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignEntityListing';
         $request = $this->getOutboundCampaignsRequest($pageSize, $pageNumber, $filterType, $name, $id, $contactListId, $dncListIds, $distributionQueueId, $edgeGroupId, $callAnalysisResponseSetId, $divisionId, $sortBy, $sortOrder);
@@ -10265,7 +10265,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundCampaignsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundCampaignsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $contactListId = null, $dncListIds = null, $distributionQueueId = null, $edgeGroupId = null, $callAnalysisResponseSetId = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/campaigns';
@@ -10780,7 +10780,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CampaignDivisionViewListing
      */
-    public function getOutboundCampaignsDivisionviews($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsDivisionviews($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundCampaignsDivisionviewsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
         return $response;
@@ -10803,7 +10803,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CampaignDivisionViewListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundCampaignsDivisionviewsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsDivisionviewsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignDivisionViewListing';
         $request = $this->getOutboundCampaignsDivisionviewsRequest($pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -10963,7 +10963,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignsDivisionviewsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsDivisionviewsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundCampaignsDivisionviewsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder)
             ->then(
@@ -10989,7 +10989,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundCampaignsDivisionviewsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundCampaignsDivisionviewsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignDivisionViewListing';
         $request = $this->getOutboundCampaignsDivisionviewsRequest($pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -11045,7 +11045,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundCampaignsDivisionviewsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundCampaignsDivisionviewsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/campaigns/divisionviews';
@@ -13344,7 +13344,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ContactListFilterEntityListing
      */
-    public function getOutboundContactlistfilters($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a', $contactListId = null)
+    public function getOutboundContactlistfilters($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending', $contactListId = null)
     {
         list($response) = $this->getOutboundContactlistfiltersWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder, $contactListId);
         return $response;
@@ -13367,7 +13367,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ContactListFilterEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundContactlistfiltersWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a', $contactListId = null)
+    public function getOutboundContactlistfiltersWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending', $contactListId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListFilterEntityListing';
         $request = $this->getOutboundContactlistfiltersRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder, $contactListId);
@@ -13527,7 +13527,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistfiltersAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a', $contactListId = null)
+    public function getOutboundContactlistfiltersAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending', $contactListId = null)
     {
         return $this->getOutboundContactlistfiltersAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder, $contactListId)
             ->then(
@@ -13553,7 +13553,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistfiltersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a', $contactListId = null)
+    public function getOutboundContactlistfiltersAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending', $contactListId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListFilterEntityListing';
         $request = $this->getOutboundContactlistfiltersRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder, $contactListId);
@@ -13609,7 +13609,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundContactlistfiltersRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a', $contactListId = null)
+    protected function getOutboundContactlistfiltersRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending', $contactListId = null)
     {
 
         $resourcePath = '/api/v2/outbound/contactlistfilters';
@@ -13744,7 +13744,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ContactListEntityListing
      */
-    public function getOutboundContactlists($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlists($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundContactlistsWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $divisionId, $sortBy, $sortOrder);
         return $response;
@@ -13770,7 +13770,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ContactListEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundContactlistsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListEntityListing';
         $request = $this->getOutboundContactlistsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $divisionId, $sortBy, $sortOrder);
@@ -13933,7 +13933,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundContactlistsAsyncWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $divisionId, $sortBy, $sortOrder)
             ->then(
@@ -13962,7 +13962,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListEntityListing';
         $request = $this->getOutboundContactlistsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $divisionId, $sortBy, $sortOrder);
@@ -14021,7 +14021,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundContactlistsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundContactlistsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $divisionId = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/contactlists';
@@ -14544,7 +14544,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ContactListDivisionViewListing
      */
-    public function getOutboundContactlistsDivisionviews($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsDivisionviews($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundContactlistsDivisionviewsWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
         return $response;
@@ -14569,7 +14569,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ContactListDivisionViewListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundContactlistsDivisionviewsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsDivisionviewsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListDivisionViewListing';
         $request = $this->getOutboundContactlistsDivisionviewsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -14731,7 +14731,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistsDivisionviewsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsDivisionviewsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundContactlistsDivisionviewsAsyncWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder)
             ->then(
@@ -14759,7 +14759,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundContactlistsDivisionviewsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundContactlistsDivisionviewsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ContactListDivisionViewListing';
         $request = $this->getOutboundContactlistsDivisionviewsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -14817,7 +14817,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundContactlistsDivisionviewsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundContactlistsDivisionviewsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/contactlists/divisionviews';
@@ -16846,7 +16846,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\DncListDivisionViewListing
      */
-    public function getOutboundDnclistsDivisionviews($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundDnclistsDivisionviews($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundDnclistsDivisionviewsWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
         return $response;
@@ -16871,7 +16871,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\DncListDivisionViewListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundDnclistsDivisionviewsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundDnclistsDivisionviewsWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DncListDivisionViewListing';
         $request = $this->getOutboundDnclistsDivisionviewsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -17033,7 +17033,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundDnclistsDivisionviewsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundDnclistsDivisionviewsAsync($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundDnclistsDivisionviewsAsyncWithHttpInfo($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder)
             ->then(
@@ -17061,7 +17061,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundDnclistsDivisionviewsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundDnclistsDivisionviewsAsyncWithHttpInfo($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DncListDivisionViewListing';
         $request = $this->getOutboundDnclistsDivisionviewsRequest($includeImportStatus, $includeSize, $pageSize, $pageNumber, $filterType, $name, $id, $sortBy, $sortOrder);
@@ -17119,7 +17119,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundDnclistsDivisionviewsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundDnclistsDivisionviewsRequest($includeImportStatus = 'false', $includeSize = 'false', $pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $id = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/dnclists/divisionviews';
@@ -17615,7 +17615,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\DialerEventEntityListing
      */
-    public function getOutboundEvents($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundEvents($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundEventsWithHttpInfo($pageSize, $pageNumber, $filterType, $category, $level, $sortBy, $sortOrder);
         return $response;
@@ -17638,7 +17638,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\DialerEventEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundEventsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundEventsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DialerEventEntityListing';
         $request = $this->getOutboundEventsRequest($pageSize, $pageNumber, $filterType, $category, $level, $sortBy, $sortOrder);
@@ -17798,7 +17798,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundEventsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundEventsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundEventsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $category, $level, $sortBy, $sortOrder)
             ->then(
@@ -17824,7 +17824,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundEventsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundEventsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\DialerEventEntityListing';
         $request = $this->getOutboundEventsRequest($pageSize, $pageNumber, $filterType, $category, $level, $sortBy, $sortOrder);
@@ -17880,7 +17880,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundEventsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundEventsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $category = null, $level = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/events';
@@ -18364,7 +18364,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\RuleSetEntityListing
      */
-    public function getOutboundRulesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundRulesets($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundRulesetsWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -18386,7 +18386,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\RuleSetEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundRulesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundRulesetsWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\RuleSetEntityListing';
         $request = $this->getOutboundRulesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -18545,7 +18545,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundRulesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundRulesetsAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundRulesetsAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -18570,7 +18570,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundRulesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundRulesetsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\RuleSetEntityListing';
         $request = $this->getOutboundRulesetsRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -18625,7 +18625,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundRulesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundRulesetsRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/rulesets';
@@ -20479,7 +20479,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CampaignSequenceEntityListing
      */
-    public function getOutboundSequences($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundSequences($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         list($response) = $this->getOutboundSequencesWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
         return $response;
@@ -20501,7 +20501,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CampaignSequenceEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOutboundSequencesWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundSequencesWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignSequenceEntityListing';
         $request = $this->getOutboundSequencesRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -20660,7 +20660,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundSequencesAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundSequencesAsync($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         return $this->getOutboundSequencesAsyncWithHttpInfo($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder)
             ->then(
@@ -20685,7 +20685,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOutboundSequencesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    public function getOutboundSequencesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CampaignSequenceEntityListing';
         $request = $this->getOutboundSequencesRequest($pageSize, $pageNumber, $filterType, $name, $sortBy, $sortOrder);
@@ -20740,7 +20740,7 @@ class OutboundApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getOutboundSequencesRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'a')
+    protected function getOutboundSequencesRequest($pageSize = '25', $pageNumber = '1', $filterType = 'Prefix', $name = null, $sortBy = null, $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/outbound/sequences';

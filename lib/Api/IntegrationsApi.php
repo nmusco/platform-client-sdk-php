@@ -5145,7 +5145,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ActionEntityListing
      */
-    public function getIntegrationsActions($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActions($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         list($response) = $this->getIntegrationsActionsWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
         return $response;
@@ -5171,7 +5171,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ActionEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIntegrationsActionsWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ActionEntityListing';
         $request = $this->getIntegrationsActionsRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
@@ -5334,7 +5334,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         return $this->getIntegrationsActionsAsyncWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions)
             ->then(
@@ -5363,7 +5363,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ActionEntityListing';
         $request = $this->getIntegrationsActionsRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
@@ -5422,7 +5422,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getIntegrationsActionsRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    protected function getIntegrationsActionsRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
 
         $resourcePath = '/api/v2/integrations/actions';
@@ -5566,7 +5566,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\CategoryEntityListing
      */
-    public function getIntegrationsActionsCategories($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $secure = null)
+    public function getIntegrationsActionsCategories($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $secure = null)
     {
         list($response) = $this->getIntegrationsActionsCategoriesWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $secure);
         return $response;
@@ -5589,7 +5589,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\CategoryEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIntegrationsActionsCategoriesWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $secure = null)
+    public function getIntegrationsActionsCategoriesWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $secure = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CategoryEntityListing';
         $request = $this->getIntegrationsActionsCategoriesRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $secure);
@@ -5749,7 +5749,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsCategoriesAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $secure = null)
+    public function getIntegrationsActionsCategoriesAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $secure = null)
     {
         return $this->getIntegrationsActionsCategoriesAsyncWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $secure)
             ->then(
@@ -5775,7 +5775,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsCategoriesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $secure = null)
+    public function getIntegrationsActionsCategoriesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $secure = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\CategoryEntityListing';
         $request = $this->getIntegrationsActionsCategoriesRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $secure);
@@ -5831,7 +5831,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getIntegrationsActionsCategoriesRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $secure = null)
+    protected function getIntegrationsActionsCategoriesRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $secure = null)
     {
 
         $resourcePath = '/api/v2/integrations/actions/categories';
@@ -5966,7 +5966,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ActionEntityListing
      */
-    public function getIntegrationsActionsDrafts($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsDrafts($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         list($response) = $this->getIntegrationsActionsDraftsWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
         return $response;
@@ -5992,7 +5992,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ActionEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getIntegrationsActionsDraftsWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsDraftsWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ActionEntityListing';
         $request = $this->getIntegrationsActionsDraftsRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
@@ -6155,7 +6155,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsDraftsAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsDraftsAsync($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         return $this->getIntegrationsActionsDraftsAsyncWithHttpInfo($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions)
             ->then(
@@ -6184,7 +6184,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getIntegrationsActionsDraftsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    public function getIntegrationsActionsDraftsAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ActionEntityListing';
         $request = $this->getIntegrationsActionsDraftsRequest($pageSize, $pageNumber, $nextPage, $previousPage, $sortBy, $sortOrder, $category, $name, $secure, $includeAuthActions);
@@ -6243,7 +6243,7 @@ class IntegrationsApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getIntegrationsActionsDraftsRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'asc', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
+    protected function getIntegrationsActionsDraftsRequest($pageSize = '25', $pageNumber = '1', $nextPage = null, $previousPage = null, $sortBy = null, $sortOrder = 'ascending', $category = null, $name = null, $secure = null, $includeAuthActions = 'false')
     {
 
         $resourcePath = '/api/v2/integrations/actions/drafts';

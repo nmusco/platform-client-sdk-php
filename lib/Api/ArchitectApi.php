@@ -8343,7 +8343,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\EmergencyGroupListing
      */
-    public function getArchitectEmergencygroups($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectEmergencygroups($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         list($response) = $this->getArchitectEmergencygroupsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
         return $response;
@@ -8364,7 +8364,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\EmergencyGroupListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectEmergencygroupsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectEmergencygroupsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\EmergencyGroupListing';
         $request = $this->getArchitectEmergencygroupsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -8522,7 +8522,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectEmergencygroupsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectEmergencygroupsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         return $this->getArchitectEmergencygroupsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name)
             ->then(
@@ -8546,7 +8546,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectEmergencygroupsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectEmergencygroupsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\EmergencyGroupListing';
         $request = $this->getArchitectEmergencygroupsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -8600,7 +8600,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectEmergencygroupsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    protected function getArchitectEmergencygroupsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
 
         $resourcePath = '/api/v2/architect/emergencygroups';
@@ -9075,7 +9075,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\IVREntityListing
      */
-    public function getArchitectIvrs($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectIvrs($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         list($response) = $this->getArchitectIvrsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
         return $response;
@@ -9096,7 +9096,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\IVREntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectIvrsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectIvrsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\IVREntityListing';
         $request = $this->getArchitectIvrsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -9254,7 +9254,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectIvrsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectIvrsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         return $this->getArchitectIvrsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name)
             ->then(
@@ -9278,7 +9278,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectIvrsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectIvrsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\IVREntityListing';
         $request = $this->getArchitectIvrsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -9332,7 +9332,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectIvrsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    protected function getArchitectIvrsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
 
         $resourcePath = '/api/v2/architect/ivrs';
@@ -10972,7 +10972,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\PromptEntityListing
      */
-    public function getArchitectPrompts($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectPrompts($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'ascending')
     {
         list($response) = $this->getArchitectPromptsWithHttpInfo($pageNumber, $pageSize, $name, $description, $nameOrDescription, $sortBy, $sortOrder);
         return $response;
@@ -10995,7 +10995,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\PromptEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectPromptsWithHttpInfo($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectPromptsWithHttpInfo($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PromptEntityListing';
         $request = $this->getArchitectPromptsRequest($pageNumber, $pageSize, $name, $description, $nameOrDescription, $sortBy, $sortOrder);
@@ -11155,7 +11155,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectPromptsAsync($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectPromptsAsync($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'ascending')
     {
         return $this->getArchitectPromptsAsyncWithHttpInfo($pageNumber, $pageSize, $name, $description, $nameOrDescription, $sortBy, $sortOrder)
             ->then(
@@ -11181,7 +11181,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectPromptsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectPromptsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\PromptEntityListing';
         $request = $this->getArchitectPromptsRequest($pageNumber, $pageSize, $name, $description, $nameOrDescription, $sortBy, $sortOrder);
@@ -11237,7 +11237,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectPromptsRequest($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'asc')
+    protected function getArchitectPromptsRequest($pageNumber = '1', $pageSize = '25', $name = null, $description = null, $nameOrDescription = null, $sortBy = 'id', $sortOrder = 'ascending')
     {
 
         $resourcePath = '/api/v2/architect/prompts';
@@ -12076,7 +12076,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ScheduleGroupEntityListing
      */
-    public function getArchitectSchedulegroups($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulegroups($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         list($response) = $this->getArchitectSchedulegroupsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
         return $response;
@@ -12097,7 +12097,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ScheduleGroupEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectSchedulegroupsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulegroupsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ScheduleGroupEntityListing';
         $request = $this->getArchitectSchedulegroupsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -12255,7 +12255,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSchedulegroupsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulegroupsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         return $this->getArchitectSchedulegroupsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name)
             ->then(
@@ -12279,7 +12279,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSchedulegroupsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulegroupsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ScheduleGroupEntityListing';
         $request = $this->getArchitectSchedulegroupsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -12333,7 +12333,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectSchedulegroupsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    protected function getArchitectSchedulegroupsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
 
         $resourcePath = '/api/v2/architect/schedulegroups';
@@ -12455,7 +12455,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\ScheduleEntityListing
      */
-    public function getArchitectSchedules($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedules($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         list($response) = $this->getArchitectSchedulesWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
         return $response;
@@ -12476,7 +12476,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\ScheduleEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectSchedulesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ScheduleEntityListing';
         $request = $this->getArchitectSchedulesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -12634,7 +12634,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSchedulesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         return $this->getArchitectSchedulesAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name)
             ->then(
@@ -12658,7 +12658,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSchedulesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    public function getArchitectSchedulesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\ScheduleEntityListing';
         $request = $this->getArchitectSchedulesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name);
@@ -12712,7 +12712,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectSchedulesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ASC', $name = null)
+    protected function getArchitectSchedulesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'name', $sortOrder = 'ascending', $name = null)
     {
 
         $resourcePath = '/api/v2/architect/schedules';
@@ -13979,7 +13979,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\SystemPromptAssetEntityListing
      */
-    public function getArchitectSystempromptResources($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectSystempromptResources($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending')
     {
         list($response) = $this->getArchitectSystempromptResourcesWithHttpInfo($promptId, $pageNumber, $pageSize, $sortBy, $sortOrder);
         return $response;
@@ -14000,7 +14000,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\SystemPromptAssetEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectSystempromptResourcesWithHttpInfo($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectSystempromptResourcesWithHttpInfo($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SystemPromptAssetEntityListing';
         $request = $this->getArchitectSystempromptResourcesRequest($promptId, $pageNumber, $pageSize, $sortBy, $sortOrder);
@@ -14158,7 +14158,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSystempromptResourcesAsync($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectSystempromptResourcesAsync($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending')
     {
         return $this->getArchitectSystempromptResourcesAsyncWithHttpInfo($promptId, $pageNumber, $pageSize, $sortBy, $sortOrder)
             ->then(
@@ -14182,7 +14182,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSystempromptResourcesAsyncWithHttpInfo($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc')
+    public function getArchitectSystempromptResourcesAsyncWithHttpInfo($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SystemPromptAssetEntityListing';
         $request = $this->getArchitectSystempromptResourcesRequest($promptId, $pageNumber, $pageSize, $sortBy, $sortOrder);
@@ -14236,7 +14236,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectSystempromptResourcesRequest($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc')
+    protected function getArchitectSystempromptResourcesRequest($promptId, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending')
     {
         // verify the required parameter 'promptId' is set
         if ($promptId === null || (is_array($promptId) && count($promptId) === 0)) {
@@ -14370,7 +14370,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\SystemPromptEntityListing
      */
-    public function getArchitectSystemprompts($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $name = null, $description = null, $nameOrDescription = null)
+    public function getArchitectSystemprompts($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $name = null, $description = null, $nameOrDescription = null)
     {
         list($response) = $this->getArchitectSystempromptsWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name, $description, $nameOrDescription);
         return $response;
@@ -14393,7 +14393,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\SystemPromptEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getArchitectSystempromptsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $name = null, $description = null, $nameOrDescription = null)
+    public function getArchitectSystempromptsWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $name = null, $description = null, $nameOrDescription = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SystemPromptEntityListing';
         $request = $this->getArchitectSystempromptsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name, $description, $nameOrDescription);
@@ -14553,7 +14553,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSystempromptsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $name = null, $description = null, $nameOrDescription = null)
+    public function getArchitectSystempromptsAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $name = null, $description = null, $nameOrDescription = null)
     {
         return $this->getArchitectSystempromptsAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $name, $description, $nameOrDescription)
             ->then(
@@ -14579,7 +14579,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getArchitectSystempromptsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $name = null, $description = null, $nameOrDescription = null)
+    public function getArchitectSystempromptsAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $name = null, $description = null, $nameOrDescription = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\SystemPromptEntityListing';
         $request = $this->getArchitectSystempromptsRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $name, $description, $nameOrDescription);
@@ -14635,7 +14635,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getArchitectSystempromptsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $name = null, $description = null, $nameOrDescription = null)
+    protected function getArchitectSystempromptsRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $name = null, $description = null, $nameOrDescription = null)
     {
 
         $resourcePath = '/api/v2/architect/systemprompts';
@@ -17105,7 +17105,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\FlowEntityListing
      */
-    public function getFlows($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
+    public function getFlows($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
     {
         list($response) = $this->getFlowsWithHttpInfo($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription, $publishVersionId, $editableBy, $lockedBy, $lockedByClientId, $secure, $deleted, $includeSchemas, $publishedAfter, $publishedBefore, $divisionId);
         return $response;
@@ -17140,7 +17140,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\FlowEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFlowsWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
+    public function getFlowsWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowEntityListing';
         $request = $this->getFlowsRequest($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription, $publishVersionId, $editableBy, $lockedBy, $lockedByClientId, $secure, $deleted, $includeSchemas, $publishedAfter, $publishedBefore, $divisionId);
@@ -17320,7 +17320,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsAsync($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
+    public function getFlowsAsync($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
     {
         return $this->getFlowsAsyncWithHttpInfo($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription, $publishVersionId, $editableBy, $lockedBy, $lockedByClientId, $secure, $deleted, $includeSchemas, $publishedAfter, $publishedBefore, $divisionId)
             ->then(
@@ -17358,7 +17358,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsAsyncWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
+    public function getFlowsAsyncWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowEntityListing';
         $request = $this->getFlowsRequest($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription, $publishVersionId, $editableBy, $lockedBy, $lockedByClientId, $secure, $deleted, $includeSchemas, $publishedAfter, $publishedBefore, $divisionId);
@@ -17426,7 +17426,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFlowsRequest($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
+    protected function getFlowsRequest($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null, $publishVersionId = null, $editableBy = null, $lockedBy = null, $lockedByClientId = null, $secure = null, $deleted = 'false', $includeSchemas = 'false', $publishedAfter = null, $publishedBefore = null, $divisionId = null)
     {
 
         $resourcePath = '/api/v2/flows';
@@ -19122,7 +19122,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\FlowDivisionViewEntityListing
      */
-    public function getFlowsDivisionviews($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
+    public function getFlowsDivisionviews($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
     {
         list($response) = $this->getFlowsDivisionviewsWithHttpInfo($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $publishVersionId, $publishedAfter, $publishedBefore, $divisionId, $includeSchemas);
         return $response;
@@ -19150,7 +19150,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\FlowDivisionViewEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFlowsDivisionviewsWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
+    public function getFlowsDivisionviewsWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowDivisionViewEntityListing';
         $request = $this->getFlowsDivisionviewsRequest($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $publishVersionId, $publishedAfter, $publishedBefore, $divisionId, $includeSchemas);
@@ -19331,7 +19331,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsDivisionviewsAsync($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
+    public function getFlowsDivisionviewsAsync($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
     {
         return $this->getFlowsDivisionviewsAsyncWithHttpInfo($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $publishVersionId, $publishedAfter, $publishedBefore, $divisionId, $includeSchemas)
             ->then(
@@ -19362,7 +19362,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsDivisionviewsAsyncWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
+    public function getFlowsDivisionviewsAsyncWithHttpInfo($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowDivisionViewEntityListing';
         $request = $this->getFlowsDivisionviewsRequest($type, $pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $publishVersionId, $publishedAfter, $publishedBefore, $divisionId, $includeSchemas);
@@ -19423,7 +19423,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFlowsDivisionviewsRequest($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
+    protected function getFlowsDivisionviewsRequest($type = null, $pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $publishVersionId = null, $publishedAfter = null, $publishedBefore = null, $divisionId = null, $includeSchemas = 'false')
     {
 
         $resourcePath = '/api/v2/flows/divisionviews';
@@ -19946,7 +19946,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\FlowOutcomeListing
      */
-    public function getFlowsOutcomes($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null)
+    public function getFlowsOutcomes($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null)
     {
         list($response) = $this->getFlowsOutcomesWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription);
         return $response;
@@ -19970,7 +19970,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\FlowOutcomeListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getFlowsOutcomesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null)
+    public function getFlowsOutcomesWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowOutcomeListing';
         $request = $this->getFlowsOutcomesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription);
@@ -20139,7 +20139,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsOutcomesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null)
+    public function getFlowsOutcomesAsync($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null)
     {
         return $this->getFlowsOutcomesAsyncWithHttpInfo($pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription)
             ->then(
@@ -20166,7 +20166,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getFlowsOutcomesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null)
+    public function getFlowsOutcomesAsyncWithHttpInfo($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\FlowOutcomeListing';
         $request = $this->getFlowsOutcomesRequest($pageNumber, $pageSize, $sortBy, $sortOrder, $id, $name, $description, $nameOrDescription);
@@ -20223,7 +20223,7 @@ class ArchitectApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getFlowsOutcomesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'asc', $id = null, $name = null, $description = null, $nameOrDescription = null)
+    protected function getFlowsOutcomesRequest($pageNumber = '1', $pageSize = '25', $sortBy = 'id', $sortOrder = 'ascending', $id = null, $name = null, $description = null, $nameOrDescription = null)
     {
 
         $resourcePath = '/api/v2/flows/outcomes';

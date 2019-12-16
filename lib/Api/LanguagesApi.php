@@ -1086,7 +1086,7 @@ class LanguagesApi
      * @throws \InvalidArgumentException
      * @return \PureCloudPlatform\Client\V2\Model\LanguageEntityListing
      */
-    public function getLanguages($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null)
+    public function getLanguages($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null)
     {
         list($response) = $this->getLanguagesWithHttpInfo($pageSize, $pageNumber, $sortOrder, $name);
         return $response;
@@ -1106,7 +1106,7 @@ class LanguagesApi
      * @throws \InvalidArgumentException
      * @return array of \PureCloudPlatform\Client\V2\Model\LanguageEntityListing, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getLanguagesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null)
+    public function getLanguagesWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LanguageEntityListing';
         $request = $this->getLanguagesRequest($pageSize, $pageNumber, $sortOrder, $name);
@@ -1263,7 +1263,7 @@ class LanguagesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLanguagesAsync($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null)
+    public function getLanguagesAsync($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null)
     {
         return $this->getLanguagesAsyncWithHttpInfo($pageSize, $pageNumber, $sortOrder, $name)
             ->then(
@@ -1286,7 +1286,7 @@ class LanguagesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getLanguagesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null)
+    public function getLanguagesAsyncWithHttpInfo($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null)
     {
         $returnType = '\PureCloudPlatform\Client\V2\Model\LanguageEntityListing';
         $request = $this->getLanguagesRequest($pageSize, $pageNumber, $sortOrder, $name);
@@ -1339,7 +1339,7 @@ class LanguagesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getLanguagesRequest($pageSize = '25', $pageNumber = '1', $sortOrder = 'ASC', $name = null)
+    protected function getLanguagesRequest($pageSize = '25', $pageNumber = '1', $sortOrder = 'ascending', $name = null)
     {
 
         $resourcePath = '/api/v2/languages';
