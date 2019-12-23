@@ -170,43 +170,55 @@ class ApiClient
 			}
 
 			if ($this->accessToken === null) {
-				if (!isset($this->options['username'])) {
-					$options = [
-						'baseUrl' => $this->options['baseAuthUrl'],
-					];
-
-					$this->accessToken = $this->authProvider->getAccessToken('client_credentials', $options);
-				} else {
-					$options = [
-						'baseUrl' => $this->options['baseAuthUrl'],
-						'username' => $this->options['username'],
-						'password' => '',
-					];
-
-					if (isset($this->options['password'])) {
-						$options['password'] = $this->options['password'];
-					}
-
-					$this->accessToken = $this->authProvider->getAccessToken('password', $options);
-				}
-
+				$this->accessToken = $this->getNewAccessToken();
 				if ($this->tokenRepository !== null) {
 					$this->tokenRepository->storeToken($this->accessToken, $tokenId);
 				}
 			}
 		}
 
-		if ($this->accessToken->hasExpired() === true) {
-			$this->accessToken = $this->authProvider->getAccessToken('refresh_token', [
-				'refresh_token' => $this->accessToken->getRefreshToken()
-			]);
-
+		if ($this->accessToken !== null && $this->accessToken->hasExpired() === true) {
+			$this->accessToken = $this->getRefreshToken();
 			if ($this->tokenRepository !== null) {
 				$this->tokenRepository->storeToken($this->accessToken, $tokenId);
 			}
 		}
 
 		return $this->accessToken;
+	}
+
+	private function getRefreshToken() : AccessToken
+	{
+		$refresh_token = $this->accessToken->getRefreshToken();
+		if ($refresh_token === null) {
+			return $this->getNewAccessToken();
+		} else {
+			return $this->authProvider->getAccessToken('refresh_token', [
+				'refresh_token' => $refresh_token,
+			]);
+		}
+	}
+	private function getNewAccessToken() : AccessToken
+	{
+		if (!isset($this->options['username'])) {
+			$options = [
+				'baseUrl' => $this->options['baseAuthUrl'],
+			];
+
+			return $this->authProvider->getAccessToken('client_credentials', $options);
+		}
+
+		$options = [
+			'baseUrl' => $this->options['baseAuthUrl'],
+			'username' => $this->options['username'],
+			'password' => '',
+		];
+
+		if (isset($this->options['password'])) {
+			$options['password'] = $this->options['password'];
+		}
+
+		return $this->authProvider->getAccessToken('password', $options);
 	}
 	
 	public function getAlertingApi() : AlertingApi
