@@ -420,14 +420,14 @@ class WrapUpCodeMapping implements ModelInterface, ArrayAccess
     public function setDefaultSet($defaultSet)
     {
         $allowedValues = $this->getDefaultSetAllowableValues();
-        if (!is_null($defaultSet) && array_diff($defaultSet, $allowedValues)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'defaultSet', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+        // if (!is_null($defaultSet) && array_diff($defaultSet, $allowedValues)) {
+        //     throw new \InvalidArgumentException(
+        //         sprintf(
+        //             "Invalid value for 'defaultSet', must be one of '%s'",
+        //             implode("', '", $allowedValues)
+        //         )
+        //     );
+        // }
         $this->container['defaultSet'] = $defaultSet;
 
         return $this;
@@ -453,14 +453,14 @@ class WrapUpCodeMapping implements ModelInterface, ArrayAccess
     public function setMapping($mapping)
     {
         $allowedValues = $this->getMappingAllowableValues();
-        if (!is_null($mapping) && array_diff($mapping, $allowedValues)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'mapping', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+        // if (!is_null($mapping) && array_diff($mapping, $allowedValues)) {
+        //     throw new \InvalidArgumentException(
+        //         sprintf(
+        //             "Invalid value for 'mapping', must be one of '%s'",
+        //             implode("', '", $allowedValues)
+        //         )
+        //     );
+        // }
         $this->container['mapping'] = $mapping;
 
         return $this;

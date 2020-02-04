@@ -381,6 +381,13 @@ class CallConversation implements ModelInterface, ArrayAccess
     public function setRecordingState($recordingState)
     {
         $allowedValues = $this->getRecordingStateAllowableValues();
+        if (!is_null($recordingState) && !in_array($recordingState, $allowedValues, true) && is_numeric($recordingState)) {
+            $value = intval($recordingState) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $recordingState = $allowedValues[$value];
+            }
+        }
+        
         if (!is_null($recordingState) && !in_array($recordingState, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(

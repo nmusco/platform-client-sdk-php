@@ -405,8 +405,6 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     const RECORDING_STATE_ACTIVE = 'active';
     const RECORDING_STATE_PAUSED = 'paused';
     
-
-    
     /**
      * Gets allowable values of the enum
      *
@@ -831,6 +829,13 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $allowedValues = $this->getStateAllowableValues();
+        if (!is_null($state) && !in_array($state, $allowedValues, true) && is_numeric($state)) {
+            $value = intval($state) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $state = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($state) && !in_array($state, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -864,6 +869,13 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     public function setDirection($direction)
     {
         $allowedValues = $this->getDirectionAllowableValues();
+        if (!is_null($direction) && !in_array($direction, $allowedValues, true) && is_numeric($direction)) {
+            $value = intval($direction) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $direction = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($direction) && !in_array($direction, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -897,6 +909,13 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     public function setDisconnectType($disconnectType)
     {
         $allowedValues = $this->getDisconnectTypeAllowableValues();
+        if (!is_null($disconnectType) && !in_array($disconnectType, $allowedValues, true) && is_numeric($disconnectType)) {
+            $value = intval($disconnectType) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $disconnectType = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($disconnectType) && !in_array($disconnectType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -1314,6 +1333,13 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     public function setFlaggedReason($flaggedReason)
     {
         $allowedValues = $this->getFlaggedReasonAllowableValues();
+        if (!is_null($flaggedReason) && !in_array($flaggedReason, $allowedValues, true) && is_numeric($flaggedReason)) {
+            $value = intval($flaggedReason) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $flaggedReason = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($flaggedReason) && !in_array($flaggedReason, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -1515,6 +1541,13 @@ class CallMediaParticipant implements ModelInterface, ArrayAccess
     public function setRecordingState($recordingState)
     {
         $allowedValues = $this->getRecordingStateAllowableValues();
+        if (!is_null($recordingState) && !in_array($recordingState, $allowedValues, true) && is_numeric($recordingState)) {
+            $value = intval($recordingState) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $recordingState = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($recordingState) && !in_array($recordingState, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(

@@ -21193,7 +21193,7 @@ class OutboundApi
      *
      * @throws \PureCloudPlatform\Client\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \PureCloudPlatform\Client\V2\Model\WrapUpCodeMapping
+     * @return \PureCloudPlatform\Client\V2\Model\WrapUpCodeMapping[]
      */
     public function getOutboundWrapupcodemappings()
     {

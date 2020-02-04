@@ -782,6 +782,13 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $allowedValues = $this->getStateAllowableValues();
+        if (!is_null($state) && !in_array($state, $allowedValues, true) && is_numeric($state)) {
+            $value = intval($state) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $state = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($state) && !in_array($state, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -848,6 +855,13 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
     public function setDisconnectType($disconnectType)
     {
         $allowedValues = $this->getDisconnectTypeAllowableValues();
+        if (!is_null($disconnectType) && !in_array($disconnectType, $allowedValues, true) && is_numeric($disconnectType)) {
+            $value = intval($disconnectType) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $disconnectType = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($disconnectType) && !in_array($disconnectType, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
@@ -1265,6 +1279,13 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
     public function setFlaggedReason($flaggedReason)
     {
         $allowedValues = $this->getFlaggedReasonAllowableValues();
+        if (!is_null($flaggedReason) && !in_array($flaggedReason, $allowedValues, true) && is_numeric($flaggedReason)) {
+            $value = intval($flaggedReason) - 1;
+            if ($value >= 0 && $value < count($allowedValues)) {
+                $flaggedReason = $allowedValues[$value];
+            }
+        }
+
         if (!is_null($flaggedReason) && !in_array($flaggedReason, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
