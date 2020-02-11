@@ -363,6 +363,7 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
     const STATE_CONVERTING = 'converting';
     const STATE_UPLOADING = 'uploading';
     const STATE_TRANSMITTING = 'transmitting';
+    const STATE_SCHEDULED = 'scheduled';
     const STATE_NONE = 'none';
     const DIRECTION_INBOUND = 'inbound';
     const DIRECTION_OUTBOUND = 'outbound';
@@ -403,6 +404,7 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
             self::STATE_UPLOADING,
             self::STATE_TRANSMITTING,
             self::STATE_NONE,
+            self::STATE_SCHEDULED,
         ];
     }
     
@@ -792,8 +794,9 @@ class CallbackMediaParticipant implements ModelInterface, ArrayAccess
         if (!is_null($state) && !in_array($state, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'state', must be one of '%s'",
-                    implode("', '", $allowedValues)
+                    "Invalid value ('%s') for 'state', must be one of '%s'",
+                        $state,
+                        implode("', '", $allowedValues)
                 )
             );
         }
